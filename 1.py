@@ -7,7 +7,7 @@ class LinkedList:
     def __init__(self):
         self.head = None
         
-    """Add a node at the end."""
+    """Add a node at the end"""
     def append(self, data):
         
         new_node = Node(data)
@@ -20,7 +20,7 @@ class LinkedList:
             current = current.next
         current.next = new_node
         
-    """Print all elements in the list."""
+    """Print all elements in the list"""
     def print_list(self):
         if self.head is None:
             print("List is empty.")
@@ -32,13 +32,13 @@ class LinkedList:
             current = current.next
         print("None")
      
-    """Delete the n-th node (1-based index)."""
+    """Delete the n-th node (1-based index)"""
     def delete_nth(self, n):
         try:
             if self.head is None:
-                raise Exception("Cannot delete from an empty list.")
+                raise Exception("Cannot delete from an empty list")
             if n <= 0:
-                raise ValueError("Index must be a positive integer (1-based).")
+                raise ValueError("Index must be a positive integer (1-based)")
 
             if n == 1:
                 print(f"Deleting node at position {n}: {self.head.data}")
@@ -55,7 +55,7 @@ class LinkedList:
                 count += 1
 
             if current is None:
-                raise IndexError("Index out of range.")
+                raise IndexError("Index out of range")
 
             print(f"Deleting node at position {n}: {current.data}")
             prev.next = current.next
